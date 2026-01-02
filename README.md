@@ -1,8 +1,7 @@
-# 통합 트레이딩 프로그램
+# Stock Trading Reference Program
+> 야후 파이낸스 API를 활용한 주식 차트 분석 및 기술적 지표, 경제 지표를 통합적으로 볼 수 있는 트레이딩 프로그램입니다.
 
-야후 파이낸스 API를 활용한 주식 차트 분석 및 기술적 지표, 경제 지표를 통합적으로 볼 수 있는 트레이딩 프로그램입니다.
-
-## 주요 기능
+# 주요 기능
 
 ### 1. 주식 차트 분석
 - **실시간 주식 데이터**: 야후 파이낸스 API를 통한 실시간 주가 데이터
@@ -23,7 +22,7 @@
 - **Fear & Greed Index**: 시장 심리 지수 (참고용)
 - **국가별 금리**: 확장 가능한 구조로 다양한 국가 금리 조회
 
-## 설치 방법
+# 설치 방법
 
 ### 1. 필수 요구사항
 - Python 3.8 이상
@@ -32,7 +31,7 @@
 ### 2. 의존성 패키지 설치
 
 ```powershell
-cd "d:\프로젝트\파이썬_주식차트"
+cd "/STRP"
 pip install -r requirements.txt
 ```
 
@@ -46,10 +45,10 @@ pip install -r requirements.txt
 ```python
 FRED_API_KEY = "여기에_발급받은_API_키_입력"
 ```
+> **참고**: FRED API 키 없이도 프로그램 사용 가능하며, 키 없으면 금리 데이터는 표시되지 않습니다.
 
-> **참고**: FRED API 키 없이도 프로그램 사용 가능하며, 금리 데이터만 표시되지 않습니다.
 
-## 사용 방법
+# 사용 방법
 
 ### 1. 프로그램 실행
 
@@ -88,39 +87,7 @@ python main.py
 - Fear & Greed Index
 - **새로고침 버튼**으로 최신 데이터 갱신
 
-## 파일 구조
-
-```
-파이썬_주식차트/
-│
-├── main.py                    # 메인 프로그램 (GUI)
-├── data_fetcher.py            # 데이터 수집 모듈
-├── technical_analysis.py      # 기술적 분석 모듈
-├── config.py                  # 설정 파일
-├── requirements.txt           # 필수 패키지 목록
-└── README.md                  # 사용 설명서
-```
-
-## 주요 모듈 설명
-
-### data_fetcher.py
-- `get_stock_data()`: 주식 데이터 수집
-- `get_stock_info()`: 주식 기본 정보 수집
-- `get_interest_rates()`: 금리 데이터 수집
-- `get_fear_greed_index()`: Fear & Greed Index 수집
-
-### technical_analysis.py
-- `calculate_rsi()`: RSI 지표 계산
-- `calculate_macd()`: MACD 지표 계산
-- `calculate_williams_r()`: Williams %R 계산
-- `calculate_all_indicators()`: 모든 지표 일괄 계산
-
-### main.py
-- PyQt5 기반 GUI 프로그램
-- 멀티스레딩으로 비동기 데이터 로딩
-- 3개 탭으로 구성된 통합 인터페이스
-
-## 사용 예시
+# 사용 예시
 
 ### 미국 주식 분석
 ```
@@ -145,7 +112,28 @@ python main.py
 간격: 5m
 → 테슬라 주식의 최근 5일 5분봉 차트 (데이 트레이딩용)
 ```
+# 기타
 
+## 주요 모듈 설명
+
+### data_fetcher.py
+- `get_stock_data()`: 주식 데이터 수집
+- `get_stock_info()`: 주식 기본 정보 수집
+- `get_interest_rates()`: 금리 데이터 수집
+- `get_fear_greed_index()`: Fear & Greed Index 수집
+
+### technical_analysis.py
+- `calculate_rsi()`: RSI 지표 계산
+- `calculate_macd()`: MACD 지표 계산
+- `calculate_williams_r()`: Williams %R 계산
+- `calculate_all_indicators()`: 모든 지표 일괄 계산
+
+### main.py
+- PyQt5 기반 GUI 프로그램
+- 멀티스레딩으로 비동기 데이터 로딩
+- 3개 탭으로 구성된 통합 인터페이스
+
+  
 ## 지표 해석 가이드
 
 ### RSI (Relative Strength Index)
@@ -191,15 +179,3 @@ pip install -r requirements.txt
 2. **데이터 지연**: 야후 파이낸스 데이터는 실시간이 아닐 수 있습니다.
 3. **API 제한**: FRED API는 일일 사용량 제한이 있을 수 있습니다.
 4. **네트워크 필요**: 모든 데이터는 온라인으로 수집되므로 인터넷 연결이 필요합니다.
-
-## 라이선스
-
-이 프로젝트는 개인 학습 및 연구 목적으로 사용하실 수 있습니다.
-
-## 기여 및 문의
-
-버그 리포트나 기능 제안은 이슈로 등록해 주세요.
-
----
-
-**Happy Trading! 📈📊**

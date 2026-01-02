@@ -1,4 +1,4 @@
-FRED_API_KEY = "7e789634104c70106ed10ef928d1b3a8"
+FRED_API_KEY = ""
 
 CHART_STYLE = 'yahoo'
 CHART_TYPE = 'candle'
