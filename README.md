@@ -110,7 +110,7 @@ python main.py
 티커: TSLA
 기간: 5d
 간격: 5m
-→ 테슬라 주식의 최근 5일 5분봉 차트 (데이 트레이딩용)
+→ 테슬라 주식의 최근 5일 5분봉 차트
 ```
 # 기타
 
@@ -134,7 +134,7 @@ python main.py
 - 3개 탭으로 구성된 통합 인터페이스
 
   
-## 지표 해석 가이드
+## 지표 해석
 
 ### RSI (Relative Strength Index)
 - **70 이상**: 과매수 구간 (매도 고려)
@@ -151,31 +151,3 @@ python main.py
 - **-20 이상**: 과매수 구간 (매도 고려)
 - **-80 이하**: 과매도 구간 (매수 고려)
 - **-20 ~ -80**: 중립 구간
-
-## 문제 해결
-
-### 주식 데이터를 가져올 수 없습니다
-- 티커 심볼이 올바른지 확인
-- 인터넷 연결 확인
-- 야후 파이낸스에서 해당 주식이 지원되는지 확인
-
-### FRED API 오류
-- `config.py`에서 API 키가 올바르게 설정되었는지 확인
-- API 키 발급: https://fred.stlouisfed.org/docs/api/api_key.html
-
-### 패키지 설치 오류
-```powershell
-# 개별 패키지 설치
-pip install yfinance pandas numpy matplotlib mplfinance PyQt5 ta requests fredapi
-
-# 또는 최신 pip로 업그레이드 후 재시도
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-```
-
-## 주의사항
-
-1. **투자 결정의 보조 도구**: 이 프로그램은 투자 판단의 보조 도구일 뿐이며, 실제 투자 결정은 신중하게 하시기 바랍니다.
-2. **데이터 지연**: 야후 파이낸스 데이터는 실시간이 아닐 수 있습니다.
-3. **API 제한**: FRED API는 일일 사용량 제한이 있을 수 있습니다.
-4. **네트워크 필요**: 모든 데이터는 온라인으로 수집되므로 인터넷 연결이 필요합니다.
